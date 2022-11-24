@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1</title>
+</head>
+
+<body>
+    <div id="container">Users:</div>
+    <ul class="list">
+        <li>John</li>
+        <li>Pete</li>
+    </ul>
+    <ul class="list">
+        <li>David</li>
+        <li>Sarah</li>
+        <li>Dan</li>
+    </ul>
+</body>
+
+<script>
+
+    //1.Retrieve the div and console.log it
+    let divRetr= document.getElementById("container").innerHTML
+
+    console.log(divRetr)
+
+    //2.Change the name “Pete” to “Richard”.
+    let ul= document.getElementsByClassName("list")[0].children[1].innerHTML
+    ul="Richard"
+
+    //3.Change each first name of the two <ul>'s to your name.
+    let elements = document.querySelectorAll('ul > li');
+
+      for (let elem of elements) {
+        elem.innerHTML="Juvenal"
+        
+      }
+
+    //4.Delete the <li> that contains the text node “Sarah”.
+       let elems = document.querySelectorAll('ul > li');
+
+        let remChild
+        for (let elem of elems) {
+         
+        } 
+     
+</script>
+
+</html>

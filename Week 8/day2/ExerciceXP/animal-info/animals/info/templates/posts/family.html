@@ -1,0 +1,16 @@
+{% block title %}
+{{ page_title|default:"family" }}
+{% endblock title %}
+
+{% block content %}
+{# It's a comment #}
+
+<h4>Liste des animaux de la famille</h4>
+<ul> 
+    {% for x in animals %} 
+        {% if x.id == id %}
+        <li>Nom de famille: {{ x.name | title }}</li>     
+        {% endif %}
+    {% endfor %} 
+</ul>
+{% endblock content %}

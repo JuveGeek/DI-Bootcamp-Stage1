@@ -1,0 +1,19 @@
+{% block title %}
+{{ page_title|default:"People" }}
+{% endblock title %}
+
+{% block content %}
+{# It's a comment #}
+
+<h4>Liste des personnes avec leurs informations</h4>
+<ul> 
+    {% for p in peopledata %} 
+    <li>Nom de famille: {{ p.id }}</li>
+    <li>Nom de famille: {{ p.name |safe|escape }}</li>
+    <li>Nom de famille: {{ p.age }}</li>
+    <li>Nom de famille: {{ p.country }}  <a href="http://127.0.0.1:8000/people/{{p.id}}" >lien {{ p.id }}</a> </li>
+    
+    <br/>
+    {% endfor %} 
+</ul>
+{% endblock content %}

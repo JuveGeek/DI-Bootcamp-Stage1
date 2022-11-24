@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2</title>
+</head>
+<body>
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit" id="submit">
+      </form> 
+      <ul class="usersAnswer"></ul>
+    
+</body>
+
+<script>
+    //1. Retrieve the form and console.log it
+
+    let form = document.forms[0]
+
+    console.log(form)
+
+    //2. Retrieve the inputs by their id and console.log them.
+    first= document.getElementById('fname')
+    console.log(first)
+
+    second= document.getElementById('lname')
+    console.log(second)
+
+    thirst= document.getElementById('submit')
+    console.log(thirst)
+
+    //3. Retrieve the inputs by their name attribute and console.log them.
+
+    console.log("-----------------------------------------------------------------")
+
+    firsto= document.forms[0].fname
+    console.log(firsto)
+
+    secondo= document.forms[0].lname
+    console.log(secondo)
+
+
+</script>
+
+</html>

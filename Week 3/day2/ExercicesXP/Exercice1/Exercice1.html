@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1</title>
+</head>
+<body>
+    <article>
+        <h1> Some Facts </h1>
+        <button id="button">Click me</button>
+        <h2> The Chocolate </h2>
+
+        <button id="button1">Hide para</button>
+        <h3> History of the chocolate </h3>
+        <p> Chocolate is made from tropical Theobroma cacao tree seeds. 
+        Its earliest use dates back to the Olmec civilization in Mesoamerica.</p>
+        <p> After the European discovery of the Americas, chocolate became 
+        very popular in the wider world, and its demand exploded. </p>
+        <p> Chocolate has since become a popular food product that millions enjoy every day, 
+        thanks to its unique, rich, and sweet taste.</p> 
+        <p> But what effect does eating chocolate have on our health?</p> 
+    </article>
+</body>
+
+<script>
+    //1. Using a DOM property, retrieve the h1 and console.log it.
+
+    let h1= document.getElementsByTagName("h1")[0].innerHTML
+    console.log(h1)
+
+    //2. Using DOM methods, remove the last paragraph in the <article> tag
+    
+    let parEl= document.querySelector("article")
+    let childEl= document.querySelectorAll('p')[3]
+
+    parEl.removeChild(childEl)
+
+    //3. Add a event listener which will change the background color of the h2 to red, when it’s clicked on.
+   document.getElementById("button").onclick=function(){
+       let el=document.getElementsByTagName("h2")[0]
+       el.setAttribute('style', "background-color : red;")
+   }
+
+   //4. Add an event listener which will hide the h3 when it’s clicked on (use the display:none property).
+   document.getElementById("button1").onclick=function(){
+    let el=document.getElementsByTagName("h3")[0]
+    el.setAttribute('style', "display : none;")
+   }
+
+
+</script>
+</html>

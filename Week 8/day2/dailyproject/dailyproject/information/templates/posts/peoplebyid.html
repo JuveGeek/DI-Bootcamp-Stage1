@@ -1,0 +1,20 @@
+{% block title %}
+{{ page_title|default:"People" }}
+{% endblock title %}
+
+{% block content %}
+{# It's a comment #}
+
+<h4>Informations sur la personne {{ id }} </h4>
+<ul> 
+    {% for p in peopledata %} 
+    {% if p.id == id %}
+    <li>Nom de famille: {{ p.id }}</li>
+    <li>Nom de famille: {{ p.name |safe|escape }}</li>
+    <li>Nom de famille: {{ p.age }}</li>
+    <li>Nom de famille: {{ p.country }}</li>
+    {% endif %}
+    <br/>
+    {% endfor %} 
+</ul>
+{% endblock content %}

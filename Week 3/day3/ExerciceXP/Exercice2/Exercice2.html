@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: yellow;
+        }
+
+        #animate {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: red;
+        
+        }
+    </style>
+</head>
+
+<body>
+    <p><button onclick="myMove()">Click Me</button></p>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+</body>
+
+<script>
+
+    let timer
+
+    function myMove() {
+
+        timer = setInterval(myTimer, 1000)
+
+    }
+
+    function myTimer() {
+        let cont = document.getElementById("container")
+
+        let newLi = document.createElement('p')
+        let newTextNode = document.createTextNode("Hello world");
+        newLi.appendChild(newTextNode)
+
+        cont.appendChild(newLi)
+    }
+
+
+</script>
+
+</html>

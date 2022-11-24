@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navBar">
+        <ul>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Friends</a></li>
+            <li><a href="#">Messenger</a></li>
+            <li><a href="#">My Pics</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+
+    //2. In the <div>, change the value of the id attribute from navBar to socialNetworkNavigation, using the setAttribute method.
+
+        let el= document.getElementById("navBar").setAttribute("id", "socialNetworkNavigation")
+    
+    //3.1 First, create a new <li> tag (use the createElement method).
+        let newLi = document.createElement('li')  
+
+    //3.2 Create a new text node with “Logout” as its specified text. 
+    let newTextNode = document.createTextNode('Logout');
+
+    //3.3 Append the text node to the newly created list node (<li>)
+        newLi.appendChild(newTextNode)
+
+    //3.4 Finally, append this updated list node to the unordered list (<ul>), using the appendChild method.
+        let ul = document.querySelector("ul")
+        ul.appendChild(newLi)
+
+</script>
+</html>

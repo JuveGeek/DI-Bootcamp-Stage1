@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2</title>
+</head>
+
+<body>
+    <div>Users:</div>
+    <ul>
+        <li>John</li>
+        <li>Pete</li>
+    </ul>
+</body>
+<script>
+    //2.Add a “light blue” background color and some padding to the <div>.
+        let i=document.getElementsByTagName("div")[0]
+
+        i.setAttribute('style', "background-color :blue; padding:20px")
+
+
+    //
+    let elements = document.querySelectorAll('ul > li');
+
+    //3. Do not display the <li> that contains the text node “John”.
+    for (let elem of elements) {
+        if(elem.innerHTML=="John"){
+            elem.setAttribute('style', "display:none;")
+        }
+    }
+
+    //4. Add a border to the <li> that contains the text node “Pete”.
+    for (let elem of elements) {
+        if(elem.innerHTML=="Pete"){
+            elem.setAttribute('style', "border:2px solid black;")
+        }
+    }
+
+    //5. Change the font size of the whole body.
+    document.getElementsByTagName('body')[0].setAttribute('style', "font-size:20px")
+
+</script>
+
+</html>

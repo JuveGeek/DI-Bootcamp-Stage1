@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 4</title>
+</head>
+<body>
+
+    <!-- In the body of the HTML page, create an empty div: <div class="listBooks"></div> -->
+    <div class="listBooks">
+        <table>
+            <tr border="1"> 
+              <td>Title</td>
+              <td>Author</td>
+              <td>Image</td>
+              <td>AlreadyRead</td>
+            </tr>
+            <tr> 
+              <td>Column 1</td>
+              <td>Column 2</td>
+              <td>Column 3</td>
+              <td></td>
+            </tr>
+          </table>
+    </div>
+</body>
+<script>
+    let allbooks=[
+
+    {
+        title: "X-men",
+        auther: "Unknox",
+        image: "jdnnne.jpg",
+        alreadyRead : true
+    },
+
+    {
+        title: "Les malheurs de sofie",
+        auther: "Unknox",
+        image: "mal.jpg",
+        alreadyRead : false
+    }
+    
+    ]
+
+    for (let elem of allbooks) {
+        
+        console.log(elem.image)
+    } 
+
+    
+</script>
+</html>

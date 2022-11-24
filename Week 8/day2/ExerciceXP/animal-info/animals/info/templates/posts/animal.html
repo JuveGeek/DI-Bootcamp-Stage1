@@ -1,0 +1,21 @@
+{% block title %}
+{{ page_title|default:"Info animal" }}
+{% endblock title %}
+
+{% block content %}
+{# It's a comment #}
+
+<h4>Informations sur l'animal</h4>
+<ul> 
+    {% for x in animals %} 
+        {% if x.id == id %}
+            <li>Identifiant: {{ x.id }} </li>
+            <li>Nom: {{ x.name }} </li>
+            <li>Nombre de pattes: {{ x.legs }} </li>
+            <li>Poids: {{ x.weight }} </li>     
+            <li>Taille: {{ x.height }} </li>
+            <li>Vitesse: {{ x.speed }} </li>
+        {% endif %}
+    {% endfor %} 
+</ul>
+{% endblock content %}
